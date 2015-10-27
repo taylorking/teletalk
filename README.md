@@ -16,6 +16,8 @@ You must add each group name to the object in order for the object to talk in th
 			"skipannounce":true, 
 			"ignore": true 
 		}
+	},
+	"group_b":{}
 }
 ```
 
