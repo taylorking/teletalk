@@ -1,0 +1,25 @@
+{
+  "name": "teletalk",
+  "version": "1.0.0",
+  "description": "Make the telegram chat talk to me",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://taylorking@github.com/taylorking/teletalk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taylorking/teletalk/issues"
+  },
+  "homepage": "https://github.com/taylorking/teletalk#readme",
+  "dependencies": {
+    "fs": "0.0.2",
+    "node-telegram-bot-api": "^0.15.0",
+    "object-hash": "^0.9.2",
+    "sys": "0.0.1"
+  }
+}
