@@ -1,7 +1,7 @@
 # Teletalk
 
 ### What this is
-This is a little node thing that will run and pipe output from your telegram bot to say on mac. This could easily be ported to something like speak on linux.. All you need to do is change command = "say -v " to command = "espeak ... whatever"
+This is a little node thing that will run and pipe output from your telegram bot to say on mac. This could easily be ported to something like espeak on linux.. All you need to do is change command = "say -v " to command = "espeak ... whatever"
 
 ### Usage
 Create a voices .json
