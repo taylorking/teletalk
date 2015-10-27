@@ -8,10 +8,13 @@ Create a voices .json
 
 #### Example: 
 ```json
-{
-	"voice":"Diego", // Set the name of the voice
-	"skipannounce":true, // if you want to skip the first name says ...
-	"ignore": true // if it's you or something and you don't want to hear this person
+{ 
+	"group_a":{ // Required. Allow the bot to listen on this group
+		"user_a":{ // Change the default settings for a given user
+			"voice":"Diego", // Set the name of the voice
+			"skipannounce":true, // if you want to skip the first name says ...
+			"ignore": true // if it's you or something and you don't want to hear this person
+		}
 }
 ```
 
