@@ -7,6 +7,8 @@ var exec = require('child_process').exec;
 var defaultVoice = 'Kathy';
 var bot = new telegramBot(tgtoken, {polling: true});
 var latestUpdate = 0;
+var commandQueue = [];
+var speaking = false;
 
 bot.on('message', function (msg) {
   if(msg.message_id <= latestUpdate) {
@@ -50,9 +52,22 @@ bot.on('message', function (msg) {
       command += "\"" + msg.text + "\"";
     }
     console.log("command: " + command);
-    var child = exec(command, function (error,stdout,stderr) {
-      console.log(error);
-    });
+    commandQueue.push(command);
+    if(!speaking) {
+      speaking=true;
+      speak();
+    }
   }
 });
+
+function speak() {
+  if(commandQueue.length === 0) {
+    speaking === false;
+    return;
+  }
+  var command = commandQueue.shift();
+  exec(command, function(error, stdout, stderr) {
+    speak();
+  });
+}
 
