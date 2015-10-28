@@ -62,7 +62,7 @@ bot.on('message', function (msg) {
 
 function speak() {
   if(commandQueue.length === 0) {
-    speaking === false;
+    speaking = false;
     return;
   }
   var command = commandQueue.shift();
