@@ -13,7 +13,7 @@ You must add each group name to the object in order for the object to talk in th
 	"group_a":{ 
 		"user_a":{ 
 			"voice":"Diego", 
-			"skipannounce":true, 
+			"skipannounce":true 
 		},
 		"user_b":{
 			"ignore":true
