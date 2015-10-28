@@ -38,19 +38,11 @@ bot.on('message', function (msg) {
     if (ignore) {
       return;
     }
-    if (voice !== undefined) {
-      command = "say -v " + "\"" + voice +  "\" ";
-      if (!skipannounce) {
-        command += msg.from.first_name + " says ";
-      }
-      command += "\"" + msg.text + "\"";
-    } else {
-      command = "say -v "+ "\"" + defaultVoice +"\" " 
-      if (!skipannounce) {
-        command += msg.from.first_name + " says ";
-      }
-      command += "\"" + msg.text + "\"";
+    command = "say -v " + "\"" + ((voice !== undefined)? voice:defaultVoice) +  "\" ";
+    if (!skipannounce) {
+      command += msg.from.first_name + " says ";
     }
+    command += "\"" + msg.text + "\"";
     console.log("command: " + command);
     commandQueue.push(command);
     if (!speaking) {
