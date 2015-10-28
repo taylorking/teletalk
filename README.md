@@ -6,7 +6,7 @@ This is a little node thing that will run and pipe output from your telegram bot
 ### Usage
 Create a voices .json
 
-You must add each group name to the object in order for the object to talk in the group. Inside that object you can create users and change the default attributes for that user.. That part is optional
+You must add each group name to the object in order for the bot to talk for the group. Inside that object you can create users and change the default attributes for that user.. That part is optional
 #### Example: 
 ```json
 { 
